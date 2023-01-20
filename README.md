@@ -11,3 +11,5 @@ pip
 setuptools
 sqlparse
 tzdata
+
+cek requirements.txt
