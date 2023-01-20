@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ayam Geprek Dahsyat - Ahlinya Ayam Geprek</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href={% static "img/favicon.ico" %} rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href={% static "lib/owlcarousel/assets/owl.carousel.min.css" %} rel="stylesheet">
+    <link href={% static "lib/lightbox/css/lightbox.min.css" %} rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href={% static "css/style.css" %} rel="stylesheet">
+</head>
+
+<!-- Test loginButton-->
+c<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-primary py-3 d-none d-md-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <!--<div class="d-inline-flex align-items-center">
+                        <a class="text-white pr-3" href="">FAQs</a>
+                        <span class="text-white">|</span>
+                        <a class="text-white px-3" href="">Help</a>
+                        <span class="text-white">|</span>
+                        <a class="text-white pl-3" href="">Support</a>
+                    </div>-->
+                </div>
+                <div class="col-md-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        
+                        
+                        
+                        {% if user.is_authenticated %}
+                        <a href="/cart" id="cart_button" class="btn btn-light border btn-sm rounded-0" style="color:black;"><span class="badge badge-primary" id="cart-count"></span> Keranjang <i class="fa fa-shopping-cart"></i></a>
+
+                        <button type="button" class="btn btn-dark btn-sm rounded-0" onclick="logout()"><i class="fa fa-sign-out"></i> Logout</button>
+                            </span>
+
+                        {% endif %}
+                        <a class="text-white px-3" href="../login">
+                            <i>Login</i>
+                        </a>
+                        <a class="text-white px-3" href="http://www.facebook.com/rahmatbudiharyono">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-white px-3" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-white px-3" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-white px-3" href="http://www.instagram.com/arubiechi">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-white pl-3" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+               
+
+                    
+
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0" >
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
+                <a href="" class="navbar-brand d-block d-lg-none">
+                    <img class="position-relative w-50 h-50" src={% static "img/ayamlogo.png" %} style="object-fit: cover;">
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="../" class="nav-item nav-link active">Beranda</a>
+                        <a href="../about" class="nav-item nav-link">Tentang Kami</a>
+                        
+                    </div>
+                    <a href="../" class="navbar-brand mx-5 d-none d-lg-block">
+                        <img class="position-static w-100 h-100" src={% static "img/ayamlogo.png" %} style="object-fit: contain;">
+                    </a>
+                    <div class="navbar-nav mr-auto py-0">
+                        <a href="../menu" class="nav-item nav-link">Daftar Menu</a>
+                        <a href="../review" class="nav-item nav-link">Pesanan</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+    {% block content %}
+    {% endblock %}
+
+       <!-- Footer Start -->
+       <div class="container-fluid footer bg-light py-5" style="margin-top: 90px;">
+        <div class="container text-center py-5">
+            <div class="row">
+                
+                <div class="col-12 mb-4">
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-secondary btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="col-12 mt-2 mb-4">
+                    <div class="row">
+                        <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
+                            <h5 class="font-weight-bold mb-2">Kunjungi Kami</h5>
+                            <p class="mb-2">Batu Alang depan Alfamart Batu Alang</p>
+                            <p class="mb-0">+62 852 3890 8821</p>
+                        </div>
+                        <div class="col-sm-6 text-center text-sm-left">
+                            <h5 class="font-weight-bold mb-2">Jam Buka</h5>
+                            <p class="mb-2">Buka setiap hari, 10.00 – 21.00</p>
+                            <p class="mb-0">Libur Nasional Tutup</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <p class="m-0">&copy; <a href="#">2023</a>. Hak cipta dilindungi undang-undang. Template dari <a href="https://htmlcodex.com">HTML Codex</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src={% static "lib/easing/easing.min.js" %}></script>
+        <script src={% static "lib/waypoints/waypoints.min.js" %}></script>
+        <script src={% static "lib/owlcarousel/owl.carousel.min.js" %}></script>
+        <script src={% static "lib/isotope/isotope.pkgd.min.js" %}></script>
+        <script src={% static "lib/lightbox/js/lightbox.min.js" %}></script>
+    
+        <!-- Contact Javascript File -->
+        <script src={% static "mail/jqBootstrapValidation.min.js" %}></script>
+        <script src={% static "mail/contact.js" %}></script>
+
+        
+    
+        <!-- Template Javascript -->
+        <script src={% static "js/main.js" %}></script>
+    
+    </body>
+    
+    </html>
