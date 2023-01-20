@@ -13,3 +13,4 @@ sqlparse
 tzdata
 
 cek requirements.txt
+ di dalam folder ayam
